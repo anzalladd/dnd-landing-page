@@ -2,10 +2,9 @@
 import HeaderSection from '~/components/sections/HeaderSection.vue'
 import HeroSection from '~/components/sections/HeroSection.vue'
 import PartnerSection from '~/components/sections/PartnerSection.vue'
-import ProjectShowcaseSection from '~/components/sections/ProjectShowcaseSection.vue'
+import ServicesSection from '~/components/sections/ServicesSection.vue'
 import OurWorkSection from '~/components/sections/OurWorkSection.vue'
-import TestimonialSection from '~/components/sections/TestimonialSection.vue'
-import CtaSection from '~/components/sections/CtaSection.vue'
+
 import FooterSection from '~/components/sections/FooterSection.vue'
 </script>
 
@@ -14,10 +13,9 @@ import FooterSection from '~/components/sections/FooterSection.vue'
     <HeaderSection />
     <HeroSection />
     <PartnerSection />
-    <ProjectShowcaseSection />
+    <ServicesSection />
     <OurWorkSection />
-    <TestimonialSection />
-    <CtaSection />
+
     <FooterSection />
   </div>
 </template>

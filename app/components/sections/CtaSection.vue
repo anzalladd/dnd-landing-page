@@ -30,7 +30,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section ref="sectionRef" class="w-full max-w-7xl mx-auto px-4 md:px-8 mb-24">
+  <section ref="sectionRef" class="w-full max-w-8xl mx-auto px-4 md:px-8 mb-24">
     <div class="relative w-full rounded-[32px] overflow-hidden min-h-[500px] flex items-center p-10 md:p-20">
       <!-- Background Image -->
       <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
@@ -52,7 +52,7 @@ onUnmounted(() => {
           :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
           <span class="font-sans font-medium text-[16px]">Get in Touch</span>
           <div
-            class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white transition-transform duration-300 group-hover:translate-x-1">
+            class="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white animate-bounce-horizontal">
             <ArrowRight class="w-4 h-4" />
           </div>
         </button>
@@ -60,3 +60,17 @@ onUnmounted(() => {
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes bounce-horizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+.animate-bounce-horizontal {
+  animation: bounce-horizontal 1.5s ease-in-out infinite;
+}
+</style>

@@ -20,7 +20,7 @@ onMounted(() => {
 
       <!-- Mobile Logo & Hamburger -->
       <div class="flex flex-row items-center justify-between w-full md:w-auto md:hidden">
-        <img src="/images/header-hero/logo.svg" alt="DND Associate Logo" class="w-[44px] h-[29.33px]" />
+        <img src="/images/header-hero/logo.svg" alt="D&D Associates" class="h-[20px] w-auto" />
         <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="p-2" aria-label="Toggle Menu">
           <svg v-if="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#091416]" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
@@ -38,22 +38,22 @@ onMounted(() => {
       <nav class="hidden md:flex flex-col p-[12px_16px] gap-[10px] bg-white rounded-[8px]">
         <div class="flex flex-row items-center gap-[16px]">
           <!-- Logo -->
-          <img src="/images/header-hero/logo.svg" alt="DND Associate Logo" class="w-[44px] h-[29.33px]" />
+          <img src="/images/header-hero/logo.svg" alt="D&D Associates" class="h-[20px] w-auto" />
 
           <!-- Links -->
           <a href="#work" class="flex flex-row items-center gap-[8px] cursor-pointer">
             <div class="flex flex-row">
-              <span class="font-basis font-normal text-[16px] leading-[24px] text-[#091416]">Work</span>
+              <span class="font-sans font-normal text-[16px] leading-[24px] text-[#091416]">Work</span>
             </div>
           </a>
           <a href="#about" class="flex flex-row items-center gap-[8px] cursor-pointer">
             <div class="flex flex-row">
-              <span class="font-basis font-normal text-[16px] leading-[24px] text-[#091416]">About</span>
+              <span class="font-sans font-normal text-[16px] leading-[24px] text-[#091416]">About</span>
             </div>
           </a>
           <a href="#contact" class="flex flex-row items-center gap-[8px] cursor-pointer">
             <div class="flex flex-row">
-              <span class="font-basis font-normal text-[16px] leading-[24px] text-[#091416]">Contact</span>
+              <span class="font-sans font-normal text-[16px] leading-[24px] text-[#091416]">Contact</span>
             </div>
           </a>
         </div>
@@ -61,9 +61,9 @@ onMounted(() => {
 
       <!-- Desktop Get in Touch Button -->
       <button
-        class="hidden md:flex flex-row items-center justify-center p-[16px] h-[52px] bg-[#091416] rounded-[8px] hover:bg-black transition-colors">
+        class="hidden md:flex flex-row items-center justify-center p-[16px] h-[52px] bg-[#121212] rounded-[8px] hover:bg-black transition-colors">
         <div class="flex flex-row items-center justify-center px-[8px] h-[20px]">
-          <span class="font-basis font-medium text-[16px] leading-[24px] text-white">Get in Touch</span>
+          <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Get in Touch</span>
         </div>
         <img src="/images/header-hero/arrow-right.svg" alt="Arrow Right" class="w-[30px] h-[30px]" />
       </button>
@@ -74,14 +74,14 @@ onMounted(() => {
     <div v-if="isMobileMenuOpen"
       class="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col p-4 gap-4 z-40 border-t border-[#F7F6F6]">
       <a href="#work" @click="isMobileMenuOpen = false"
-        class="py-2 font-basis font-medium text-[18px] text-[#091416]">Work</a>
+        class="py-2 font-sans font-medium text-[18px] text-[#091416]">Work</a>
       <a href="#about" @click="isMobileMenuOpen = false"
-        class="py-2 font-basis font-medium text-[18px] text-[#091416]">About</a>
+        class="py-2 font-sans font-medium text-[18px] text-[#091416]">About</a>
       <a href="#contact" @click="isMobileMenuOpen = false"
-        class="py-2 font-basis font-medium text-[18px] text-[#091416]">Contact</a>
-      <button class="flex flex-row items-center justify-center p-[16px] h-[52px] bg-[#091416] rounded-[8px] mt-2">
+        class="py-2 font-sans font-medium text-[18px] text-[#091416]">Contact</a>
+      <button class="flex flex-row items-center justify-center p-[16px] h-[52px] bg-[#121212] rounded-[8px] mt-2">
         <div class="flex flex-row items-center justify-center px-[8px] h-[20px]">
-          <span class="font-basis font-medium text-[16px] leading-[24px] text-white">Get in Touch</span>
+          <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Get in Touch</span>
         </div>
         <img src="/images/header-hero/arrow-right.svg" alt="Arrow Right" class="w-[30px] h-[30px]" />
       </button>

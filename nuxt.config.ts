@@ -14,6 +14,11 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  vite: {
+    server: {
+      allowedHosts: ['ad44-103-78-115-232.ngrok-free.app', '.ngrok-free.app'],
+    },
+  },
   app: {
     head: {
       title: 'DND Associate — Strategic Design & Product Studio',

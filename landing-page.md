@@ -15,7 +15,7 @@ description: Builds and maintains the DND Associate landing page — pixel-perfe
    → fetch ONCE per session, extract all tokens before touching any section
 2. **Typography**: https://www.figma.com/design/NZjbEA0eVaphZONe779UeN/-SRDS--Internal---Studio-Web-Design?node-id=53-332
    → fetch ONCE per session, extract font family/sizes/weights/line-heights
-3. **Main landing page**: https://www.figma.com/design/UmVT92ex5W4G8dl1TqM6dx/Global-Talent-Project?node-id=170-1299&t=wa27oRQjIMfvY5MN-4
+3. **Main landing page**: https://www.figma.com/design/gMn2eBF1arBzuIPCXBU2tL/D-D-Website?node-id=1-1414&m=dev
    → fetch the SPECIFIC section frame being built (drill into sub-frame node-id, don't fetch the whole page at once)
 
 ## Step 1 — Extract design tokens (do this before any section work)

@@ -10,10 +10,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        bagoss: ['Bagoss Standard', 'Inter', 'sans-serif'],
-        sfpro: ['SF Pro Display', 'SF Pro', 'Inter', 'sans-serif'],
+        bagoss: ['Alegreya', 'Georgia', 'serif'],
+        sfpro: ['Alegreya', 'Georgia', 'serif'],
         sans: ['Inter', 'sans-serif'],
-        basis: ['Basis Grotesque Arabic Pro', 'Inter', 'sans-serif'],
+        basis: ['Alegreya', 'Georgia', 'serif'],
+        alegreya: ['Alegreya', 'Georgia', 'serif'],
       },
       colors: {
         secondary: {

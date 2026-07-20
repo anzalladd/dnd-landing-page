@@ -2,108 +2,74 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const sectionRef = ref<HTMLElement | null>(null)
-const isVisibleTitle = ref(false)
-const isVisibleLogos = ref(false)
+const isVisible = ref(false)
 let observer: IntersectionObserver | null = null
 
 onMounted(() => {
   observer = new IntersectionObserver(
     ([entry]) => {
       if (entry && entry.isIntersecting) {
-        isVisibleTitle.value = true
-        setTimeout(() => { isVisibleLogos.value = true }, 200)
-        if (sectionRef.value && observer) {
-          observer.unobserve(sectionRef.value)
-        }
+        isVisible.value = true
+        if (sectionRef.value && observer) observer.unobserve(sectionRef.value)
       }
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   )
-
-  if (sectionRef.value) {
-    observer.observe(sectionRef.value)
-  }
+  if (sectionRef.value) observer.observe(sectionRef.value)
 })
 
 onUnmounted(() => {
   if (observer) observer.disconnect()
 })
+
+// Partner logos from Figma node 1:1543 — all rendered grayscale via CSS filter
+const logos = [
+  { src: '/images/partner-section/logo-1-6a59ca.png', alt: 'Partner 1', h: 'h-[36px]' },
+  { src: '/images/partner-section/logo-2.png', alt: 'Partner 2', h: 'h-[32px]' },
+  { src: '/images/partner-section/logo-3.png', alt: 'Partner 3', h: 'h-[30px]' },
+  { src: '/images/partner-section/logo-4-icon.png', alt: 'Partner 4', h: 'h-[35px]' },
+  { src: '/images/partner-section/logo-6-2d5d0c.png', alt: 'Partner 5', h: 'h-[27px]' },
+  { src: '/images/partner-section/logo-7-icon.png', alt: 'Partner 6', h: 'h-[35px]' },
+]
 </script>
 
 <template>
-  <section ref="sectionRef" class="flex flex-col items-stretch gap-5 w-full max-w-8xl mx-auto px-4 md:px-[60px] py-10 lg:py-20">
+  <section ref="sectionRef" class="w-full flex flex-col items-stretch px-4 md:px-8 lg:px-[60px] max-w-8xl mx-auto bg-white py-[16px] overflow-hidden transition-all duration-700 ease-out"
+    :class="isVisible ? 'opacity-100' : 'opacity-0'">
+    <!-- Marquee wrapper with edge fade masks -->
+    <div class="relative overflow-hidden">
+      <!-- Left fade -->
+      <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none"
+        style="background: linear-gradient(to right, white, transparent);" />
+      <!-- Right fade -->
+      <div class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none"
+        style="background: linear-gradient(to left, white, transparent);" />
 
-    <!-- Title Area -->
-    <div 
-      class="flex flex-col lg:flex-row justify-between items-start lg:items-start gap-8 transition-all duration-1000 ease-out"
-      :class="isVisibleTitle ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-    >
-
-      <!-- Heading -->
-      <h2 class="font-basis font-medium text-[40px] leading-[48px] tracking-[-0.005em] text-hero-heading m-0">
-        <span class="text-muted-text">D&D Associates </span>is a design<br class="hidden lg:block">
-        and development studio<br class="hidden lg:block">
-        based in Indonesia
-      </h2>
-
-      <!-- Description -->
-      <p class="font-basis font-normal text-[18px] leading-[28px] text-[#3A4345]/80 m-0 max-w-[648px]">
-        We work across Mobile App Design, Web Design, Web App/Dashboard Design, Website Development, and Logo & Brand
-        Identity. Our team is full-time, dedicated, and hands-on from first sketch to final deployment.
-      </p>
-
-    </div>
-
-    <!-- Partners Logo Area -->
-    <div 
-      class="flex flex-col p-8 items-stretch gap-4 bg-white rounded-lg w-full mt-4 shadow-sm overflow-hidden relative transition-all duration-1000 ease-out"
-      :class="isVisibleLogos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-    >
-      <div class="flex flex-row py-5 group">
-        <!-- Primary Marquee -->
-        <div class="flex animate-marquee gap-12 shrink-0 items-center pr-12">
-          <img src="/images/partner-section/Logo.svg" alt="Partner 1" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-1.svg" alt="Partner 2" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-2.svg" alt="Partner 3" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-3.svg" alt="Partner 4" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-4.svg" alt="Partner 5" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-5.svg" alt="Partner 6" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-        </div>
-        <!-- Duplicated Marquee for Infinite Scroll -->
-        <div aria-hidden="true" class="flex animate-marquee gap-12 shrink-0 items-center pr-12">
-          <img src="/images/partner-section/Logo.svg" alt="Partner 1" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-1.svg" alt="Partner 2" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-2.svg" alt="Partner 3" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-3.svg" alt="Partner 4" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-4.svg" alt="Partner 5" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
-          <img src="/images/partner-section/Logo-5.svg" alt="Partner 6" class="h-8 lg:h-12 w-auto max-w-none opacity-60 hover:opacity-100 transition-opacity" />
+      <div class="flex py-[12px]">
+        <!-- 4 copies to ensure it fills ultra-wide screens even with only 6 logos -->
+        <div v-for="n in 4" :key="n" class="flex w-max shrink-0 items-center gap-[64px] pr-[64px] animate-marquee" :aria-hidden="n > 1 ? 'true' : 'false'">
+          <img v-for="(logo, i) in logos" :key="`${n}-${i}`" :src="logo.src" :alt="logo.alt"
+            :class="[logo.h, 'w-auto max-w-none']" style="filter: grayscale(1) opacity(0.55); transition: filter 0.3s;"
+            @mouseenter="(e) => (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(1) opacity(1)'"
+            @mouseleave="(e) => (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(1) opacity(0.55)'" />
         </div>
       </div>
     </div>
-
   </section>
 </template>
 
 <style scoped>
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 </style>
