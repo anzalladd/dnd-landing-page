@@ -28,11 +28,11 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Studio SRDS is a strategic design studio and product development partner. We build direction, experience, and growth systems with brands for lasting impact.',
+            'D&D Associates is a strategic design studio and product development partner. We build direction, experience, and growth systems with brands for lasting impact.',
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/images/header-hero/logo.svg' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/images/logo.svg' }
       ]
     },
   },
