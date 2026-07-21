@@ -87,31 +87,11 @@ onMounted(() => {
   >
     <div class="max-w-[1320px] mx-auto flex flex-col gap-12 md:gap-16">
       
-      <!-- Top: Images -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-        <div ref="leftCardRef" class="w-full overflow-hidden rounded-[20px] border border-gray-100 shadow-sm">
-          <img
-            src="/images/services/kv-design.webp"
-            alt="Design Services"
-            class="w-full h-auto object-cover"
-            draggable="false"
-          />
-        </div>
-        <div ref="rightCardRef" class="w-full overflow-hidden rounded-[20px] border border-gray-100 shadow-sm">
-          <img
-            src="/images/services/kv-development.webp"
-            alt="Development Services"
-            class="w-full h-auto object-cover"
-            draggable="false"
-          />
-        </div>
-      </div>
-
-      <!-- Bottom: Text Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-16 items-start">
+      <!-- Unified Grid for Reordering -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-16 gap-x-6 md:gap-x-8 lg:gap-x-16 items-start">
         
-        <!-- Left Text -->
-        <div ref="textLeftRef" class="flex flex-col gap-6 max-w-[580px]">
+        <!-- Intro Text (Mobile: order-1, Desktop: order-3) -->
+        <div ref="textLeftRef" class="flex flex-col gap-6 w-full max-w-[580px] order-1 md:order-3">
           <p class="font-sans text-[16px] leading-[26px] md:text-[18px] md:leading-[28px] text-[#121212]/80">
             Markets change. Expectations evolve. Trends come and go. What lasts is clarity, trust, and products people remember.
           </p>
@@ -120,8 +100,28 @@ onMounted(() => {
           </p>
         </div>
 
-        <!-- Right Text -->
-        <div ref="textRightRef" class="flex flex-col gap-10 max-w-[580px]">
+        <!-- Left Image (Mobile: order-2, Desktop: order-1) -->
+        <div ref="leftCardRef" class="w-full overflow-hidden rounded-[20px] border border-gray-100 shadow-sm order-2 md:order-1">
+          <img
+            src="/images/services/kv-design.webp"
+            alt="Design Services"
+            class="w-full h-auto object-cover"
+            draggable="false"
+          />
+        </div>
+
+        <!-- Right Image (Mobile: order-3, Desktop: order-2) -->
+        <div ref="rightCardRef" class="w-full overflow-hidden rounded-[20px] border border-gray-100 shadow-sm order-3 md:order-2">
+          <img
+            src="/images/services/kv-development.webp"
+            alt="Development Services"
+            class="w-full h-auto object-cover"
+            draggable="false"
+          />
+        </div>
+
+        <!-- Right Text (Mobile: order-4, Desktop: order-4) -->
+        <div ref="textRightRef" class="flex flex-col gap-10 w-full max-w-[580px] order-4 md:order-4">
           
           <div class="flex flex-col gap-3">
             <h3 class="font-alegreya text-[32px] leading-[40px] font-medium text-[#121212]">

@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 // ── Refs ──────────────────────────────────────────────────────────────────────
 const headlineRef = ref<HTMLElement | null>(null)
@@ -19,6 +24,7 @@ const rightPillarRef = ref<HTMLElement | null>(null)
 // ── GSAP entrance ─────────────────────────────────────────────────────────────
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+
 
   // 1. BG Cloud spreads fade in first, then infinitely drift left/right
   tl.fromTo(leftBgCloudRef.value, { opacity: 0, x: -30 }, {
@@ -95,11 +101,62 @@ onMounted(() => {
     },
     1.4,
   )
+
+  // 8. Add Parallax effects tied to scroll
+  const section = document.querySelector('.hero-section')
+  
+  // Background clouds (deepest layer) move slowest (stay on screen longer)
+  gsap.to([leftBgCloudRef.value, rightBgCloudRef.value], {
+    y: 150,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  })
+
+  // Main clouds (mid layer)
+  gsap.to([leftCloudRef.value, rightCloudRef.value], {
+    y: 100,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  })
+
+  // Angels (foreground layer)
+  gsap.to([leftAngelRef.value, rightAngelRef.value], {
+    y: 50,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  })
+
+  // Pillars (closest foreground layer)
+  gsap.to([leftPillarRef.value, rightPillarRef.value], {
+    y: -50, // move up faster
+    ease: 'none',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  })
 })
 </script>
 
 <template>
-  <section class="relative w-full overflow-hidden bg-white" style="height: calc(100svh - 82px);">
+  <section class="hero-section relative w-full overflow-hidden bg-white" style="height: calc(100svh - 82px);">
 
     <!--
       Layer order (bottom → top):
