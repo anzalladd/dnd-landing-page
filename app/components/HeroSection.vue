@@ -171,49 +171,49 @@ onMounted(() => {
     <img ref="leftBgCloudRef" src="/images/hero/left_bg_cloud.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
              absolute bottom-[-2%] left-0 z-10
              w-[70vw] md:w-[55vw] lg:w-[45vw] 2xl:w-[40vw] max-w-[600px] h-auto
-             object-contain object-bottom-left" style="opacity: 0;" />
+             object-contain object-bottom-left" style="opacity: 0; max-height: min(800px, calc(100svh - 400px));" />
 
     <!-- ── Right BG Cloud ──────────────────── -->
     <img ref="rightBgCloudRef" src="/images/hero/right_bg_cloud.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
              absolute bottom-[-2%] right-0 z-10
              w-[70vw] md:w-[55vw] lg:w-[45vw] 2xl:w-[40vw] max-w-[600px] h-auto
-             object-contain object-bottom-right" style="opacity: 0;" />
+             object-contain object-bottom-right" style="opacity: 0; max-height: min(800px, calc(100svh - 400px));" />
 
     <!-- ── Left Main Cloud ───────────────────── -->
     <img ref="leftCloudRef" src="/images/hero/left_cloud.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 left-0 z-5
+             absolute bottom-0 left-[-15%] md:left-[-10%] 2xl:left-0 z-5
              w-[90vw] md:w-[75vw] lg:w-[65vw] 2xl:w-[60vw] max-w-[955px] h-auto
-             object-contain object-bottom-left" style="opacity: 0;" />
+             object-contain object-bottom-left" style="opacity: 0; max-height: min(955px, calc(100svh - 420px));" />
 
     <!-- ── Right Main Cloud ──────────────────── -->
     <img ref="rightCloudRef" src="/images/hero/right_cloud.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 right-0 z-5
+             absolute bottom-0 right-[-15%] md:right-[-10%] 2xl:right-0 z-5
              w-[90vw] md:w-[75vw] lg:w-[65vw] 2xl:w-[60vw] max-w-[955px] h-auto
-             object-contain object-bottom-right" style="opacity: 0;" />
+             object-contain object-bottom-right" style="opacity: 0; max-height: min(955px, calc(100svh - 420px));" />
 
     <!-- ── Left angel figure ─────────────────────────────────────────────── -->
     <img ref="leftAngelRef" src="/images/hero/left_char.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
              absolute bottom-0 left-[-5%] md:left-[0%] 2xl:left-[4%] z-10
-             h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] max-h-[650px] w-auto
-             object-contain object-bottom" style="opacity: 0;" />
+             h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] w-auto
+             object-contain object-bottom" style="opacity: 0; max-height: min(650px, calc(100svh - 440px));" />
 
     <!-- ── Right angel figure ────────────────────────────────────────────── -->
     <img ref="rightAngelRef" src="/images/hero/right_char.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
              absolute bottom-0 right-[-5%] md:right-[0%] 2xl:right-[4%] z-10
-             h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] max-h-[650px] w-auto
-             object-contain object-bottom" style="opacity: 0;" />
+             h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] w-auto
+             object-contain object-bottom" style="opacity: 0; max-height: min(650px, calc(100svh - 440px));" />
 
     <!-- ── Left column/pillar group ───────────────────────── -->
     <img ref="leftPillarRef" src="/images/hero/left_pillar.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 left-[-10%] md:left-[-5%] 2xl:left-0 z-20
-             h-[45vh] md:h-[55vh] lg:h-[60vh] 2xl:h-[70vh] max-h-[1000px] w-auto
-             object-contain object-bottom" style="opacity: 0;" />
+             absolute bottom-0 left-[-5%] md:left-[-2%] xl:left-[0%] z-20
+             h-[55vh] md:h-[65vh] lg:h-[70vh] 2xl:h-[80vh] w-auto
+             object-contain object-bottom" style="opacity: 0; max-height: 1000px;" />
 
     <!-- ── Right column/pillar group ─────────────────────── -->
     <img ref="rightPillarRef" src="/images/hero/right_pillar.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 right-[-10%] md:right-[-5%] 2xl:right-0 z-20
-             h-[45vh] md:h-[55vh] lg:h-[60vh] 2xl:h-[70vh] max-h-[1000px] w-auto
-             object-contain object-bottom" style="opacity: 0;" />
+             absolute bottom-0 right-[-5%] md:right-[-2%] xl:right-[0%] z-20
+             h-[55vh] md:h-[65vh] lg:h-[70vh] 2xl:h-[80vh] w-auto
+             object-contain object-bottom" style="opacity: 0; max-height: 1000px;" />
 
     <!-- ── Text content (centred, above all imagery) ─────────────────────── -->
     <div class="relative z-30 flex flex-col items-center text-center
@@ -221,26 +221,33 @@ onMounted(() => {
              pt-[120px] md:pt-[140px] lg:pt-[156px]
              pb-[280px] md:pb-[360px] lg:pb-[420px]">
 
-      <!-- Headline -->
-      <h1 ref="headlineRef" class="font-alegreya font-medium tracking-[-0.015em]
-               text-[40px]  leading-[48px]
-               md:text-[60px] md:leading-[68px]
-               lg:text-[72px] lg:leading-[80px]
-               max-w-[920px] mx-auto" style="opacity: 0;">
-        <span class="text-[#A8A8A8]">Research</span>
-        <span class="text-[#121212]"> before pixels.</span><br />
-        <span class="text-[#121212]">Strategy before scale.</span>
-      </h1>
+      <!-- Wrapper for text and background glow -->
+      <div class="relative flex flex-col items-center">
+        <!-- Subtle white radial gradient glow -->
+        <div class="absolute inset-0 scale-[1.3] md:scale-150 pointer-events-none z-[-1] blur-2xl"
+             style="background: radial-gradient(circle at center, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 65%);"></div>
 
-      <!-- Subheadline -->
-      <p ref="subheadRef" class="font-sans font-medium text-[#121212]/80
-               text-[15px] leading-[24px]
-               md:text-[16px] md:leading-[26px]
-               max-w-[580px] mx-auto mt-6 md:mt-8" style="opacity: 0;">
-        D&amp;D Associates helps startups and growing businesses research,
-        design, and build digital products that stay relevant, solve real
-        problems, and scale with confidence.
-      </p>
+        <!-- Headline -->
+        <h1 ref="headlineRef" class="font-alegreya font-medium tracking-[-0.015em]
+                 text-[40px]  leading-[48px]
+                 md:text-[60px] md:leading-[68px]
+                 lg:text-[72px] lg:leading-[80px]
+                 max-w-[920px] mx-auto" style="opacity: 0;">
+          <span class="text-[#A8A8A8]">Research</span>
+          <span class="text-[#121212]"> before pixels.</span><br />
+          <span class="text-[#121212]">Strategy before scale.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p ref="subheadRef" class="font-sans font-medium text-[#121212]/80
+                 text-[15px] leading-[24px]
+                 md:text-[16px] md:leading-[26px]
+                 max-w-[580px] mx-auto mt-6 md:mt-8" style="opacity: 0;">
+          D&amp;D Associates helps startups and growing businesses research,
+          design, and build digital products that stay relevant, solve real
+          problems, and scale with confidence.
+        </p>
+      </div>
 
       <!-- Scroll indicator -->
       <div ref="arrowGroupRef" class="flex flex-col items-center gap-[10px] mt-[64px] md:mt-[80px] lg:mt-[96px]"
