@@ -205,21 +205,21 @@ onMounted(() => {
 
     <!-- ── Left column/pillar group ───────────────────────── -->
     <img ref="leftPillarRef" src="/images/hero/left_pillar.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 left-[-5%] md:left-[-2%] xl:left-[0%] z-20
-             h-[55vh] md:h-[65vh] lg:h-[70vh] 2xl:h-[80vh] w-auto
-             object-contain object-bottom" style="opacity: 0; max-height: 1000px;" />
+             absolute bottom-0 left-[-2%] md:left-[-2%] xl:left-[0%] z-20
+             h-[65vh] md:h-[70vh] lg:h-[75vh] 2xl:h-[85vh] w-auto max-h-[calc(100svh-380px)] md:max-h-[1000px]
+             object-contain object-bottom" style="opacity: 0;" />
 
     <!-- ── Right column/pillar group ─────────────────────── -->
     <img ref="rightPillarRef" src="/images/hero/right_pillar.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 right-[-5%] md:right-[-2%] xl:right-[0%] z-20
-             h-[55vh] md:h-[65vh] lg:h-[70vh] 2xl:h-[80vh] w-auto
-             object-contain object-bottom" style="opacity: 0; max-height: 1000px;" />
+             absolute bottom-0 right-[-2%] md:right-[-2%] xl:right-[0%] z-20
+             h-[65vh] md:h-[70vh] lg:h-[75vh] 2xl:h-[85vh] w-auto max-h-[calc(100svh-380px)] md:max-h-[1000px]
+             object-contain object-bottom" style="opacity: 0;" />
 
     <!-- ── Text content (centred, above all imagery) ─────────────────────── -->
     <div class="relative z-30 flex flex-col items-center text-center
              px-4
-             pt-[120px] md:pt-[140px] lg:pt-[156px]
-             pb-[280px] md:pb-[360px] lg:pb-[420px]">
+             pt-[32px] md:pt-[140px] lg:pt-[156px]
+             pb-[180px] md:pb-[360px] lg:pb-[420px]">
 
       <!-- Wrapper for text and background glow -->
       <div class="relative flex flex-col items-center">
@@ -229,7 +229,7 @@ onMounted(() => {
 
         <!-- Headline -->
         <h1 ref="headlineRef" class="font-alegreya font-medium tracking-[-0.015em]
-                 text-[40px]  leading-[48px]
+                 text-[36px] leading-[44px]
                  md:text-[60px] md:leading-[68px]
                  lg:text-[72px] lg:leading-[80px]
                  max-w-[920px] mx-auto" style="opacity: 0;">
@@ -250,7 +250,7 @@ onMounted(() => {
       </div>
 
       <!-- Scroll indicator -->
-      <div ref="arrowGroupRef" class="flex flex-col items-center gap-[10px] mt-[64px] md:mt-[80px] lg:mt-[96px]"
+      <div ref="arrowGroupRef" class="flex flex-col items-center gap-[10px] mt-[32px] md:mt-[80px] lg:mt-[96px]"
         style="opacity: 0;">
         <span class="font-sans text-[11px] tracking-[0.08em] uppercase text-[#A8A8A8] select-none">
           please scroll down

@@ -62,13 +62,13 @@ onMounted(() => {
       </div>
 
       <!-- Text Content -->
-      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto md:mt-[8vh]">
+      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto mt-[140px] md:mt-[8vh]">
         <!-- Subtle white radial gradient glow -->
         <div class="absolute inset-0 scale-[1.3] md:scale-150 pointer-events-none z-[-1] blur-2xl"
              style="background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 65%);"></div>
              
         <h2
-          class="font-serif mt-10 md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+          class="font-serif text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
           Our work.
         </h2>
         <h2
