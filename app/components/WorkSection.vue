@@ -59,11 +59,17 @@ onMounted(() => {
       <!-- Cloud/Angel Background Image -->
       <div
         class="absolute inset-0 top-0 left-0 w-full h-full pointer-events-none select-none z-0 flex justify-center items-center overflow-hidden">
-        <img src="/images/work/works_bg.webp" alt="" class="w-full h-full object-cover object-center opacity-90" />
+        <img src="/images/work/works_bg.webp" alt=""
+          class="w-full h-full object-cover opacity-90 object-center md:object-[150%_center]" />
       </div>
 
       <!-- Text Content -->
-      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto">
+      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto mt-[140px] md:mt-[8vh]">
+        <!-- Subtle white radial gradient glow -->
+        <div class="absolute inset-0 scale-[1.3] md:scale-150 pointer-events-none z-[-1] blur-2xl"
+          style="background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 65%);">
+        </div>
+
         <h2
           class="font-serif mt-[100px] sm:mt-[60px] md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
           Our work.
