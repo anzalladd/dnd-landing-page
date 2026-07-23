@@ -104,7 +104,7 @@ onMounted(() => {
 
   // 8. Add Parallax effects tied to scroll
   const section = document.querySelector('.hero-section')
-  
+
   // Background clouds (deepest layer) move slowest (stay on screen longer)
   gsap.to([leftBgCloudRef.value, rightBgCloudRef.value], {
     y: 150,
@@ -218,7 +218,7 @@ onMounted(() => {
     <!-- ── Text content (centred, above all imagery) ─────────────────────── -->
     <div class="relative z-30 flex flex-col items-center text-center
              px-4
-             pt-[120px] md:pt-[140px] lg:pt-[156px]
+             pt-[20px] md:pt-[140px] lg:pt-[156px]
              pb-[280px] md:pb-[360px] lg:pb-[420px]">
 
       <!-- Headline -->

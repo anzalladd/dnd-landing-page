@@ -45,7 +45,8 @@ onMounted(() => {
 
     <!-- Content -->
     <div class="relative z-10 flex flex-col items-center text-center w-full max-w-[1000px] mx-auto px-4">
-      <h2 ref="h2Ref" class="font-serif text-[32px] sm:text-[40px] md:text-[56px] leading-[1.1] text-white">
+      <h2 ref="h2Ref"
+        class="font-serif text-[26px] md:text-[32px] sm:text-[40px] md:text-[56px] leading-[1.1] text-white">
         <span class="text-[#A8A8A8]">Creativity</span> is the last bastion<br class="hidden md:block" /> of human
         exceptionalism.
       </h2>

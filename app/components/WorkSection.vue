@@ -50,7 +50,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="work" ref="workSectionRef" class="w-full relative pb-24 flex flex-col items-center overflow-hidden">
+  <section id="work" ref="workSectionRef"
+    class="w-full relative pb-0 md:pb-24 flex flex-col items-center overflow-hidden">
     <!-- Header Banner -->
     <div ref="headerRef"
       class="relative w-full min-h-[40vh] md:min-h-[70vh] flex flex-col items-center justify-center px-4 overflow-hidden">
@@ -64,11 +65,11 @@ onMounted(() => {
       <!-- Text Content -->
       <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto">
         <h2
-          class="font-serif mt-10 md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+          class="font-serif mt-[100px] sm:mt-[60px] md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
           Our work.
         </h2>
         <h2
-          class="font-serif w-[70%] md:w-full text-[#121212] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em] mt-1 md:mt-2">
+          class="font-serif w-[70%] md:w-full text-[#121212] text-[20px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em] mt-1 md:mt-2">
           Recent case studies, plus a few things we built just because we wanted to.
         </h2>
       </div>

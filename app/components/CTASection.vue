@@ -31,23 +31,23 @@ onMounted(() => {
 
 <template>
   <section ref="ctaRef"
-    class="w-full relative min-h-[50vh] flex flex-col items-center justify-center pb-24 overflow-hidden bg-white">
+    class="w-full relative min-h-[50vh] flex flex-col items-center justify-center pb-0 md:pb-24 overflow-hidden bg-white">
     <!-- Cloud Background -->
-    <div class="absolute inset-0 top-0 left-0 w-full h-full pointer-events-none select-none z-0">
+    <div class="absolute inset-0 top-0 left-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
       <!-- Left Cloud -->
       <img src="/images/cta/left_cloud.webp" alt=""
-        class="absolute left-[-10%] bottom-0 w-[85%] sm:w-[70%] md:w-[45%] max-w-[600px] h-auto max-h-[80%] md:max-h-full object-contain object-left-bottom opacity-90" />
+        class="absolute right-1/2 md:right-auto md:left-[-10%] bottom-0 w-[85%] sm:w-[70%] md:w-[45%] max-w-[600px] h-auto max-h-[80%] md:max-h-full object-contain object-right-bottom md:object-left-bottom opacity-90" />
 
       <!-- Right Cloud -->
       <img src="/images/cta/right_cloud.webp" alt=""
-        class="absolute right-[-10%] md:right-0 bottom-0 w-[85%] sm:w-[70%] md:w-[45%] max-w-[600px] h-auto max-h-[80%] md:max-h-full object-contain object-right-bottom opacity-90" />
+        class="absolute left-1/2 md:left-auto md:right-[-10%] bottom-0 w-[85%] sm:w-[70%] md:w-[45%] max-w-[600px] h-auto max-h-[80%] md:max-h-full object-contain object-left-bottom md:object-right-bottom opacity-90" />
     </div>
 
     <!-- Text Content -->
     <div
       class="cta-content relative z-10 flex flex-col items-center text-center max-w-[600px] pt-12 md:pt-20 mx-auto px-4 pb-12">
       <h2
-        class="font-alegreya font-medium text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+        class="font-alegreya font-medium text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
         <span class="text-[#A8A8A8]">Interested</span>
         <span class="text-[#121212]"> in working with us?</span>
       </h2>

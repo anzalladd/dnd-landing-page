@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="w-full flex flex-col items-center justify-center py-4 px-4 md:py-5 md:px-8 lg:py-[22px] lg:px-[60px] max-w-8xl mx-auto relative z-50 transition-all duration-1000 ease-out"
+    class="w-full flex flex-col items-center justify-center py-0 px-4 md:py-5 md:px-8 lg:py-[22px] lg:px-[60px] max-w-8xl mx-auto relative z-50 transition-all duration-1000 ease-out"
     :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'">
     <div class="w-full flex flex-row items-center justify-between self-stretch">
 
@@ -22,15 +22,16 @@ onMounted(() => {
       <div
         class="flex flex-row items-center justify-between w-full md:w-auto md:hidden bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-gray-100 shadow-sm">
         <img src="/images/logo.svg" alt="D&D Associates" class="h-[20px] w-auto" />
-        <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="p-2 relative w-10 h-10 flex items-center justify-center" aria-label="Toggle Menu">
+        <button @click="isMobileMenuOpen = !isMobileMenuOpen"
+          class="p-2 relative w-10 h-10 flex items-center justify-center" aria-label="Toggle Menu">
           <svg :class="isMobileMenuOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'"
             class="absolute transition-all duration-300 ease-in-out h-6 w-6 text-[#091416]" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
           <svg :class="isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-75'"
-            class="absolute transition-all duration-300 ease-in-out h-6 w-6 text-[#091416]" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+            class="absolute transition-all duration-300 ease-in-out h-6 w-6 text-[#091416]" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -72,16 +73,12 @@ onMounted(() => {
     </div>
 
     <!-- Mobile Menu Overlay -->
-    <transition
-      enter-active-class="transition duration-300 ease-out origin-top"
-      enter-from-class="opacity-0 scale-y-95 -translate-y-2"
-      enter-to-class="opacity-100 scale-y-100 translate-y-0"
+    <transition enter-active-class="transition duration-300 ease-out origin-top"
+      enter-from-class="opacity-0 scale-y-95 -translate-y-2" enter-to-class="opacity-100 scale-y-100 translate-y-0"
       leave-active-class="transition duration-200 ease-in origin-top"
-      leave-from-class="opacity-100 scale-y-100 translate-y-0"
-      leave-to-class="opacity-0 scale-y-95 -translate-y-2"
-    >
+      leave-from-class="opacity-100 scale-y-100 translate-y-0" leave-to-class="opacity-0 scale-y-95 -translate-y-2">
       <div v-if="isMobileMenuOpen"
-        class="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col p-4 gap-4 z-40 border-t border-[#F7F6F6] rounded-b-xl mt-2">
+        class="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col pt-0 p-4 gap-4 z-40 border-t border-[#F7F6F6] rounded-b-xl">
         <a href="#info" @click="isMobileMenuOpen = false"
           class="py-2 font-sans font-medium text-[18px] text-[#091416]">Info</a>
         <a href="#work" @click="isMobileMenuOpen = false"
