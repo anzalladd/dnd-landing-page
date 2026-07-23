@@ -193,7 +193,7 @@ onMounted(() => {
 
     <!-- ── Left angel figure ─────────────────────────────────────────────── -->
     <img ref="leftAngelRef" src="/images/hero/left_char.webp" alt="" aria-hidden="true" class="pointer-events-none select-none
-             absolute bottom-0 left-[-5%] md:left-[0%] 2xl:left-[4%] z-10
+             absolute bottom-0 left-[-1%] md:left-[0%] 2xl:left-[4%] z-10
              h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] w-auto
              object-contain object-bottom" style="opacity: 0; max-height: min(650px, calc(100svh - 440px));" />
 

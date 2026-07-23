@@ -64,14 +64,14 @@ onMounted(() => {
       </div>
 
       <!-- Text Content -->
-      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto mt-[140px] md:mt-[8vh]">
+      <div class="relative z-10 flex flex-col items-center text-center max-w-[700px] mx-auto mt-[80px] md:mt-[8vh]">
         <!-- Subtle white radial gradient glow -->
         <div class="absolute inset-0 scale-[1.3] md:scale-150 pointer-events-none z-[-1] blur-2xl"
           style="background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 65%);">
         </div>
 
         <h2
-          class="font-serif mt-[100px] sm:mt-[60px] md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+          class="font-serif mt-[10px] sm:mt-[60px] md:mt-0 text-[#A8A8A8] text-[26px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
           Our work.
         </h2>
         <h2
@@ -83,7 +83,7 @@ onMounted(() => {
 
     <!-- Case Studies Grid -->
     <div
-      class="relative z-10 w-full max-w-[1320px] px-6 md:px-12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-12">
+      class="relative z-10 w-full max-w-[1320px] px-6 md:px-12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-4 md:mt-12">
 
       <!-- Card 1 (RMA) -->
       <div class="work-card flex flex-col gap-5 cursor-pointer group">
