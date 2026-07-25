@@ -20,8 +20,10 @@ onMounted(() => {
 
       <!-- Mobile Logo & Hamburger -->
       <div
-        class="flex flex-row items-center justify-between w-full md:w-auto md:hidden bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-gray-100 shadow-sm">
-        <img src="/images/logo.svg" alt="D&D Associates" class="h-[20px] w-auto" />
+        class="flex flex-row items-center justify-between w-full md:w-auto md:hidden bg-[#F7F6F6] backdrop-blur-sm p-4 rounded-xl">
+        <NuxtLink to="/" class="flex items-center">
+          <img src="/images/logo.svg" alt="D&D Associates" class="h-[20px] w-auto" />
+        </NuxtLink>
         <button @click="isMobileMenuOpen = !isMobileMenuOpen"
           class="p-2 relative w-10 h-10 flex items-center justify-center" aria-label="Toggle Menu">
           <svg :class="isMobileMenuOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'"
@@ -77,23 +79,24 @@ onMounted(() => {
       enter-from-class="opacity-0 scale-y-95 -translate-y-2" enter-to-class="opacity-100 scale-y-100 translate-y-0"
       leave-active-class="transition duration-200 ease-in origin-top"
       leave-from-class="opacity-100 scale-y-100 translate-y-0" leave-to-class="opacity-0 scale-y-95 -translate-y-2">
-      <div v-if="isMobileMenuOpen"
-        class="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col pt-0 p-4 gap-4 z-40 border-t border-[#F7F6F6] rounded-b-xl">
-        <NuxtLink to="/#info" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Info</NuxtLink>
-        <NuxtLink to="/#work" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Work</NuxtLink>
-        <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Contact</NuxtLink>
-        <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
-          class="flex flex-row items-center justify-center p-[12px_24px] bg-[#121212] rounded-[8px] mt-2 gap-[12px] group">
-          <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Book a Call</span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="text-white group-hover:translate-x-1 transition-transform">
-            <path d="M13.75 6.75L19.25 12L13.75 17.25M19 12H4.75" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </NuxtLink>
+      <div v-if="isMobileMenuOpen" class="md:hidden absolute top-full left-0 w-full p-4">
+        <div class="bg-white shadow-md flex flex-col pt-0 gap-4 p-4 z-40 border-t border-[#F7F6F6] rounded-b-xl">
+          <NuxtLink to="/#info" @click="isMobileMenuOpen = false"
+            class="py-2 font-sans font-medium text-[18px] text-[#091416]">Info</NuxtLink>
+          <NuxtLink to="/#work" @click="isMobileMenuOpen = false"
+            class="py-2 font-sans font-medium text-[18px] text-[#091416]">Work</NuxtLink>
+          <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
+            class="py-2 font-sans font-medium text-[18px] text-[#091416]">Contact</NuxtLink>
+          <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
+            class="flex flex-row items-center justify-center p-[12px_24px] bg-[#121212] rounded-[8px] mt-2 gap-[12px] group">
+            <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Book a Call</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-white group-hover:translate-x-1 transition-transform">
+              <path d="M13.75 6.75L19.25 12L13.75 17.25M19 12H4.75" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </NuxtLink>
+        </div>
       </div>
     </transition>
   </header>

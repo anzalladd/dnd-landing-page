@@ -75,27 +75,27 @@ onMounted(() => {
 
     <!-- Background Elements -->
     <img src="/images/hero/left_char.webp" alt="" aria-hidden="true" class="left-angel pointer-events-none select-none
-             absolute bottom-0 left-[-1%] md:left-[0%] 2xl:left-[4%] z-10
+             hidden md:block absolute bottom-0 left-[-1%] md:left-[0%] 2xl:left-[4%] z-10
              h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] w-auto
              object-contain object-bottom" style="opacity: 0; max-height: min(650px, calc(100svh - 440px));" />
 
     <img src="/images/hero/right_char.webp" alt="" aria-hidden="true" class="right-angel pointer-events-none select-none
-             absolute bottom-0 right-[-5%] md:right-[0%] 2xl:right-[4%] z-10
+             hidden md:block absolute bottom-0 right-[-5%] md:right-[0%] 2xl:right-[4%] z-10
              h-[35vh] md:h-[45vh] lg:h-[50vh] 2xl:h-[60vh] w-auto
              object-contain object-bottom" style="opacity: 0; max-height: min(650px, calc(100svh - 440px));" />
 
     <img src="/images/hero/left_pillar.webp" alt="" aria-hidden="true" class="left-pillar pointer-events-none select-none
-             absolute bottom-0 left-[-2%] md:left-[-2%] xl:left-[0%] z-20
+             hidden md:block absolute bottom-0 left-[-2%] md:left-[-2%] xl:left-[0%] z-20
              h-[65vh] md:h-[70vh] lg:h-[75vh] 2xl:h-[85vh] w-auto max-h-[calc(100svh-380px)] md:max-h-[1000px]
              object-contain object-bottom" style="opacity: 0;" />
 
     <img src="/images/hero/right_pillar.webp" alt="" aria-hidden="true" class="right-pillar pointer-events-none select-none
-             absolute bottom-0 right-[-2%] md:right-[-2%] xl:right-[0%] z-20
+             hidden md:block absolute bottom-0 right-[-2%] md:right-[-2%] xl:right-[0%] z-20
              h-[65vh] md:h-[70vh] lg:h-[75vh] 2xl:h-[85vh] w-auto max-h-[calc(100svh-380px)] md:max-h-[1000px]
              object-contain object-bottom" style="opacity: 0;" />
 
     <!-- Content -->
-    <div class="relative z-30 flex flex-col items-center w-full px-4 max-w-[1000px] mx-auto">
+    <div class="relative z-30 flex flex-col items-center w-full px-4 h-full max-w-[1000px] mx-auto">
 
       <!-- Headline -->
       <h1 class="contact-headline font-alegreya font-medium tracking-[-0.015em]
@@ -109,10 +109,10 @@ onMounted(() => {
       </h1>
 
       <!-- Cal.com Widget Container -->
-      <div class="cal-container w-full max-w-[960px] mx-auto flex justify-center bg-transparent rounded-[16px] relative"
+      <div
+        class="cal-container w-full max-w-[960px] mx-auto flex justify-center bg-white rounded-[16px] relative mb-[40px] mt-5 border border-[#E5E5E5] md:border-none shadow-sm"
         style="opacity: 0;">
-        <div id="my-cal-inline"
-          class="w-full max-w-[100%] flex justify-center h-[600px] md:h-[700px] overflow-hidden rounded-[16px]"></div>
+        <div id="my-cal-inline" class="w-full max-w-[100%] flex justify-center min-h-[600px] rounded-[16px]"></div>
       </div>
     </div>
 

@@ -17,7 +17,7 @@ const toggle = () => {
   <div class="w-full bg-[#F7F6F6] rounded-xl overflow-hidden mb-2.5 transition-all duration-300">
     <button @click="toggle"
       class="w-full flex items-center justify-between p-4 text-left transition-colors hover:bg-black/5">
-      <span class="font-serif text-[24px] leading-8 text-[#121212] tracking-tight">{{ title }}</span>
+      <span class="font-serif text-[18px] md:text-[24px] leading-8 text-[#121212] tracking-tight">{{ title }}</span>
       <div class="text-[#121212]">
         <svg v-if="!isOpen" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
