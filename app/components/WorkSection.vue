@@ -130,7 +130,7 @@ onMounted(() => {
       </div>
 
       <!-- Card 4 (Trovant) -->
-      <div class="work-card flex flex-col gap-5 cursor-pointer group mt-0 md:mt-24">
+      <NuxtLink to="/work/trovant" class="work-card flex flex-col gap-5 cursor-pointer group mt-0 md:mt-24">
         <div class="w-full overflow-hidden aspect-[4/3] md:aspect-[1.2]">
           <img src="/images/work/kv-trovant.webp" alt="Trovant"
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
@@ -142,7 +142,7 @@ onMounted(() => {
             <span class="font-sans text-[14px] text-[#121212] opacity-80">Full Cycle Rebrand</span>
           </div>
         </div>
-      </div>
+      </NuxtLink>
 
     </div>
   </section>

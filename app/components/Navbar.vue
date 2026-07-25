@@ -40,27 +40,27 @@ onMounted(() => {
       <!-- Desktop Nav Tabs Container (Left-aligned Pill) -->
       <nav class="hidden md:flex flex-row items-center p-[10px_24px] gap-[24px] bg-[#F7F6F6] rounded-[8px]">
         <!-- Logo -->
-        <a href="#" class="flex items-center">
+        <NuxtLink to="/" class="flex items-center">
           <img src="/images/logo.svg" alt="D&D Associates" class="h-[24px] w-auto object-contain" />
-        </a>
+        </NuxtLink>
 
         <!-- Links -->
-        <a href="#info" class="flex flex-row items-center cursor-pointer">
+        <NuxtLink to="/#info" class="flex flex-row items-center cursor-pointer">
           <span
             class="font-sans font-medium text-[16px] leading-[24px] text-[#091416] hover:text-black transition-colors">Info</span>
-        </a>
-        <a href="#work" class="flex flex-row items-center cursor-pointer">
+        </NuxtLink>
+        <NuxtLink to="/#work" class="flex flex-row items-center cursor-pointer">
           <span
             class="font-sans font-medium text-[16px] leading-[24px] text-[#091416] hover:text-black transition-colors">Work</span>
-        </a>
-        <a href="#contact" class="flex flex-row items-center cursor-pointer">
+        </NuxtLink>
+        <NuxtLink to="/contact" class="flex flex-row items-center cursor-pointer">
           <span
             class="font-sans font-medium text-[16px] leading-[24px] text-[#091416] hover:text-black transition-colors">Contact</span>
-        </a>
+        </NuxtLink>
       </nav>
 
       <!-- Desktop Book a Call Button -->
-      <button
+      <NuxtLink to="/contact"
         class="hidden md:flex flex-row items-center justify-center p-[12px_24px] bg-[#121212] rounded-[8px] hover:bg-black transition-colors gap-[12px] group">
         <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Book a Call</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ onMounted(() => {
           <path d="M13.75 6.75L19.25 12L13.75 17.25M19 12H4.75" stroke="currentColor" stroke-width="1.5"
             stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-      </button>
+      </NuxtLink>
 
     </div>
 
@@ -79,13 +79,13 @@ onMounted(() => {
       leave-from-class="opacity-100 scale-y-100 translate-y-0" leave-to-class="opacity-0 scale-y-95 -translate-y-2">
       <div v-if="isMobileMenuOpen"
         class="md:hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col pt-0 p-4 gap-4 z-40 border-t border-[#F7F6F6] rounded-b-xl">
-        <a href="#info" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Info</a>
-        <a href="#work" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Work</a>
-        <a href="#contact" @click="isMobileMenuOpen = false"
-          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Contact</a>
-        <button
+        <NuxtLink to="/#info" @click="isMobileMenuOpen = false"
+          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Info</NuxtLink>
+        <NuxtLink to="/#work" @click="isMobileMenuOpen = false"
+          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Work</NuxtLink>
+        <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
+          class="py-2 font-sans font-medium text-[18px] text-[#091416]">Contact</NuxtLink>
+        <NuxtLink to="/contact" @click="isMobileMenuOpen = false"
           class="flex flex-row items-center justify-center p-[12px_24px] bg-[#121212] rounded-[8px] mt-2 gap-[12px] group">
           <span class="font-sans font-medium text-[16px] leading-[24px] text-white">Book a Call</span>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ onMounted(() => {
             <path d="M13.75 6.75L19.25 12L13.75 17.25M19 12H4.75" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </button>
+        </NuxtLink>
       </div>
     </transition>
   </header>

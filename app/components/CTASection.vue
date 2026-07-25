@@ -59,14 +59,14 @@ onMounted(() => {
 
       <img src="/images/hero/arrow.webp" alt="Arrow" class="h-24 md:h-24 w-auto -rotate-90 object-contain opacity-80" />
 
-      <button
+      <NuxtLink to="/contact"
         class="bg-[#121212] text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-sans font-medium text-[16px] flex items-center justify-center gap-3 hover:bg-[#2a2a2a] transition-colors shadow-lg group">
         Book a call
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform"
           fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
-      </button>
+      </NuxtLink>
     </div>
   </section>
 </template>
